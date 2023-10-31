@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>The Dark Forest</title>
+		<link rel="icon" type="image/x-icon" href="/Images/Icons/cabin1.ico" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body style="overflow-y: hidden">
+		<div id="whyDoIEvenTryAnymore">
+		<button class="start game btn" id="start" onclick="loaded = true;startGame()">Play</button>
+		</div>
+		<button class="arrowkeys floats btn" id="left" onclick="turnLeft()">&lArr;</button>
+		<button class="arrowkeys floats btn" id="right" onclick="turnRight()">&rArr;</button>
+		<div id="y">
+			<p class="container" id="pointsContainer">Points: <span id="points">0</span>/300 </p>
+			<p class="container" id="timeContainer">Time: <span id="time">8:00 PM</span></p>
+			<div id="x" style="display:flex; justify-content: space-around">
+				<button class="front btn" id="lightSwitch" onclick="toggleLights()">Turn off lights</button>
+				<button class="windows btn" id="leftWindow" onclick="leftToggle()">Open</button>
+				<p id="windowSpace"></p>
+				<button class="windows btn" id="rightWindow" onclick="rightToggle()">Open</button>
+				<button class="door btn" id="doorKnob" onclick="doorToggle()">Close</button>
+					<p id="doorSpace"></p>
+				<button class="door btn" id="stepBack" onclick="distanceToggle()">Step back</button>
+				<button class="door btn" id="getCloser" onclick="distanceToggle()">Look Closer</button>
+				<button class="fireplace btn" id="fireplace" onclick="lightFire()">Light fire</button>
+				<button class="accept game btn" id="acceptFate" onclick="returnToStart()">Return to start screen </button>
+				<p class="container" id="finalTime"></p>
+			</div>
+		</div>
+		<div id="imgWrapper">
+			<img id="viewedImage" src="Images/0Start/Start.png" />
+		</div>
+		<p id="devbar" class="btn" style="display:none">Devbar</p>
+		 <input type="range" min="0.1" max="10" value="1" class="slider" id="myRange" step="0.0001">
+		<span id="speedContCont"><p id="speedCont">Speed: <span id="speed"></span></p></span>
+		<script src="new.js"></script>
+	</body>
+</html>
