@@ -1,5 +1,5 @@
 # TheDarkForest.github.io
-The code for my submission to the Congressional App Challenge 2023\
+The code for my submission to the Congressional App Challenge 2023
 
 Note that my actual submission isn't changing because of these updates, they are just to make it a better game as my friends and family do play it
 
