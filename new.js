@@ -810,27 +810,26 @@ const images = {
 	]
 };
 
-const image = document.getElementById("viewedImage");
-const lights = document.getElementById("lightSwitch");
-const left = document.getElementById("leftWindow");
-const right = document.getElementById("rightWindow");
-const door = document.getElementById("doorKnob");
-const fire = document.getElementById("fireplace");
-const start = document.getElementById("start");
-const forward = document.getElementById("getCloser");
-const back = document.getElementById("stepBack");
-const turnL = document.getElementById("left");
-const turnR = document.getElementById("right");
-const startScreenButton = document.getElementById("acceptFate");
-const devbar = document.getElementById("devbar");
-const space1 = document.getElementById("windowSpace");
-const space2 = document.getElementById("doorSpace");
-const pointsContainer = document.getElementById("pointsContainer");
-const points = document.getElementById("points");
-const timeContainer = document.getElementById("timeContainer");
-const time = document.getElementById("time");
-const finalTime = document.getElementById("finalTime");
-
+const image = document.getElementById("viewedImage"),
+	lights = document.getElementById("lightSwitch"),
+	left = document.getElementById("leftWindow"),
+	right = document.getElementById("rightWindow"),
+	door = document.getElementById("doorKnob"),
+	fire = document.getElementById("fireplace"),
+	start = document.getElementById("start"),
+	forward = document.getElementById("getCloser"),
+	back = document.getElementById("stepBack"),
+	turnL = document.getElementById("left"),
+	turnR = document.getElementById("right"),
+	startScreenButton = document.getElementById("acceptFate"),
+	devbar = document.getElementById("devbar"),
+	space1 = document.getElementById("windowSpace"),
+	space2 = document.getElementById("doorSpace"),
+	pointsContainer = document.getElementById("pointsContainer"),
+	points = document.getElementById("points"),
+	timeContainer = document.getElementById("timeContainer"),
+	time = document.getElementById("time"),
+	finalTime = document.getElementById("finalTime");
 let ranTip,
 	fireplaceIsLit,
 	fireStage,
@@ -863,9 +862,7 @@ let ranTip,
 	displayTime = "8:00 PM",
 	speed = 1,
 	ticker1,
-				ticker2
-;
-
+	ticker2;
 
 function setScreen(screen) {
 	image.src = images[screen][0];
@@ -964,28 +961,27 @@ function startGame() {
 		minutes = 0;
 		displayTime = "8:00 PM";
 	}
-		points.textContent = pointsNum;
-ticker1 = setInterval(function () {
-	if (gameActive) {
-		frontUpd();
-		fireUpd();
-		windowsUpd();
-		devbar.innerHTML = `
+	points.textContent = pointsNum;
+	ticker1 = setInterval(function () {
+		if (gameActive) {
+			frontUpd();
+			fireUpd();
+			windowsUpd();
+			devbar.innerHTML = `
 			Front: ${(Math.round(frontTick * 1000) / 1000) * 25}%
 			<br> Fire: ${(Math.round(fireTick * 10000) / 10000) * 50}%
 			<br> Windows: ${(windowsTick - 20) * 2.5}% 
 			<br> Door: ${(Math.round(doorTick * 1000) / 1000) * 20}%
 		`;
-		doorUpd();
-	}
-}, 1000/speed);
-ticker2 = setInterval(function () {
-	if (gameActive) {
-		pointsHandler();
-		timeHandler();
-	}
-}, 1000/speed);
-
+			doorUpd();
+		}
+	}, 1000 / speed);
+	ticker2 = setInterval(function () {
+		if (gameActive) {
+			pointsHandler();
+			timeHandler();
+		}
+	}, 1000 / speed);
 }
 function returnToStart() {
 	setScreen("startScreen");
@@ -1022,9 +1018,6 @@ function lightsInit() {
 			setScreen("FrontL2");
 		} else if (frontStage == 3) {
 			setScreen("FrontL3");
-		} else {
-			alive = false;
-			lightScare();
 		}
 	} else {
 		if (frontStage == 0) {
@@ -1035,9 +1028,6 @@ function lightsInit() {
 			setScreen("FrontD2");
 		} else if (frontStage == 3) {
 			setScreen("FrontD3");
-		} else {
-			alive = false;
-			lightScare();
 		}
 	}
 }
@@ -1047,67 +1037,52 @@ function lightFire() {
 		noises.fire.play();
 		fireplaceIsLit = true;
 		fire.textContent = 10;
-		fireInit();
 		setTimeout(() => {
 			fire.textContent = 9;
-			fireInit();
 			setTimeout(() => {
 				fire.textContent = 8;
-				fireInit();
 				setTimeout(() => {
 					fire.textContent = 7;
-					fireInit();
 					setTimeout(() => {
 						fire.textContent = 6;
-						fireInit();
 						setTimeout(() => {
 							fire.textContent = 5;
 							setTimeout(() => {
-								fireInit();
 								fire.textContent = 4;
 								setTimeout(() => {
-									fireInit();
 									fire.textContent = 3;
 									setTimeout(() => {
-										fireInit();
 										fire.textContent = 2;
 										setTimeout(() => {
-											fireInit();
 											fire.textContent = 1;
 											setTimeout(() => {
 												fireplaceIsLit = false;
-												fireInit();
 												fire.textContent = "Light fire";
-											}, 1000/speed);
-										}, 1000/speed);
-									}, 1000/speed);
-								}, 1000/speed);
-							}, 1000/speed);
-						}, 1000/speed);
-					}, 1000/speed);
-				}, 1000/speed);
-			}, 1000/speed);
-		}, 1000/speed);
+											}, 1000 / speed);
+										}, 1000 / speed);
+									}, 1000 / speed);
+								}, 1000 / speed);
+							}, 1000 / speed);
+						}, 1000 / speed);
+					}, 1000 / speed);
+				}, 1000 / speed);
+			}, 1000 / speed);
+		}, 1000 / speed);
 	}
 }
+
 function fireInit() {
 	if (fireplaceIsLit) {
 		if (fireStage == 0) {
 			setScreen("FireL0");
 		} else if (fireStage == 1) {
 			setScreen("FireL1");
-		} else {
-			alive = false;
-			fireScare();
 		}
 	} else {
 		if (fireStage == 0) {
 			setScreen("FireU0");
 		} else if (fireStage == 1) {
 			setScreen("FireU1");
-		} else {
-			alive = false;
-			fireScare();
 		}
 	}
 }
@@ -1141,10 +1116,6 @@ function rightToggle() {
 	windowsInit();
 }
 function windowsInit() {
-	if (windowStage == 2) {
-		alive = false;
-		windowScare();
-	}
 	if (windowStage == 1) {
 		if (windowClosed == "left") {
 			if (windowSide == "left") {
@@ -1171,8 +1142,7 @@ function windowsInit() {
 			left.textContent = "Close";
 			right.textContent = "Close";
 		}
-	}
-	if (windowStage == 0) {
+	} else if (windowStage == 0) {
 		if (windowClosed == "left") {
 			setScreen("Windows01");
 			left.textContent = "Open";
@@ -1212,10 +1182,7 @@ function distanceToggle() {
 	}
 }
 function doorInit() {
-	if (doorStage == 5) {
-		alive = false;
-		doorScare();
-	} else if (doorIsZoomed) {
+	if (doorIsZoomed) {
 		if (doorIsOpen == false) {
 			setScreen("DoorC");
 			door.textContent("Open");
@@ -1405,6 +1372,10 @@ function frontUpd() {
 	if (wall == 0 && alive == true) {
 		lightsInit();
 	}
+	if (frontStage == 4 && alive == true) {
+		lightScare();
+		alive = false;
+	}
 }
 
 function fireUpd() {
@@ -1423,6 +1394,10 @@ function fireUpd() {
 	if (wall == 1 && alive == true) {
 		fireInit();
 	}
+	if (fireStage == 2 && alive == true) {
+		fireScare();
+		alive = false;
+	}
 }
 
 function doorUpd() {
@@ -1440,6 +1415,10 @@ function doorUpd() {
 	doorStage = Math.floor(doorTick);
 	if (wall == 3 && alive == true) {
 		doorInit();
+	}
+	if (doorstage == 5 && alive == true) {
+		doorScare();
+		alive = false;
 	}
 }
 
@@ -1462,6 +1441,10 @@ function windowsUpd() {
 	}
 	if (wall == 2 && alive == true) {
 		windowsInit();
+	}
+	if (windowStage == 2 && alive == true) {
+		windowScare();
+		alive = false;
 	}
 }
 function windowsChoose() {
@@ -1560,27 +1543,27 @@ output.innerHTML = slider.value;
 slider.oninput = function () {
 	speed = this.value;
 	output.innerHTML = Math.round(this.value * 10) / 10;
-clearInterval(ticker1);
+	noises.fire.playbackRate = speed;
+	clearInterval(ticker1);
 	clearInterval(ticker2);
 	ticker1 = setInterval(function () {
-	if (gameActive) {
-		frontUpd();
-		fireUpd();
-		windowsUpd();
-		devbar.innerHTML = `
+		if (gameActive) {
+			frontUpd();
+			fireUpd();
+			windowsUpd();
+			devbar.innerHTML = `
 			Front: ${(Math.round(frontTick * 1000) / 1000) * 25}%
 			<br> Fire: ${(Math.round(fireTick * 10000) / 10000) * 50}%
 			<br> Windows: ${(windowsTick - 20) * 2.5}% 
 			<br> Door: ${(Math.round(doorTick * 1000) / 1000) * 20}%
 		`;
-		doorUpd();
-	}
-}, 1000/speed);
-ticker2 = setInterval(function () {
-	if (gameActive) {
-		pointsHandler();
-		timeHandler();
-	}
-}, 1000/speed);
-
+			doorUpd();
+		}
+	}, 1000 / speed);
+	ticker2 = setInterval(function () {
+		if (gameActive) {
+			pointsHandler();
+			timeHandler();
+		}
+	}, 1000 / speed);
 };
