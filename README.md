@@ -1,5 +1,7 @@
 # TheDarkForest.github.io
-The code for my submission to the Congressional App Challenge 2023
+The code for my submission to the Congressional App Challenge 2023\
+
+Note that my actual submission isn't changing because of these updates, they are just to make it a better game as my friends and family do play it
 
 Update 1 - Code was supposed to be in folder format, so the js had to be updated to have the correct file locations\
 Update 2 - I didn't fix them all accidentally, all images should now render properly\
