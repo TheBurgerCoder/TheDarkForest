@@ -981,7 +981,7 @@ function startGame() {
 			pointsHandler();
 			timeHandler();
 		}
-	}, 750 / speed);
+	}, 500 / speed);
 }
 function returnToStart() {
 	setScreen("startScreen");
@@ -1565,5 +1565,5 @@ slider.oninput = function () {
 			pointsHandler();
 			timeHandler();
 		}
-	}, 750 / speed);
+	}, 500 / speed);
 };
