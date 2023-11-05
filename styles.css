@@ -1,185 +1,185 @@
-  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+v  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 * {
-	margin: 0;
-	font-family: monospace;
-	color:black;
-	font-family: 'Source Code Pro', monospace;
+  margin: 0;
+  font-family: monospace;
+  color:black;
+  font-family: 'Source Code Pro', monospace;
 }
 body {
-	background-color: black;
+  background-color: black;
 }
 .title {
-	color: green;
+  color: green;
 }
 .arrowkeys {
-	background: #ddd;
-	font-weight: 900;
-	font-size: 50px;
-	width: 90px;
-	height: 60px;
-	padding-bottom: 70px;
-	display: none;
+  background: #ddd;
+  font-weight: 900;
+  font-size: 50px;
+  width: 90px;
+  height: 60px;
+  padding-bottom: 70px;
+  display: none;
 }
 .floats {
-	position: fixed;
+  position: fixed;
 }
 .btn {
-	background: #ddd;
-	border: 10px solid #555;
-	border-radius: 100px;
-	font-weight: 900;
-	font-size: 40px;
+  background: #ddd;
+  border: 10px solid #555;
+  border-radius: 100px;
+  font-weight: 900;
+  font-size: 40px;
 }
 #buttonWrap {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 #imgWrapper {
-	margin-top: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 img {
-	width: 99.5vw;
-	height: 98vh;
-	border: 2% solid #444;
-	border-radius: 200px;
-	position: fixed;
-	top: 1vh;
-	z-index: -1000;
+  width: 99.5vw;
+  height: 98vh;
+  border: 2% solid #444;
+  border-radius: 200px;
+  position: fixed;
+  top: 1vh;
+  z-index: -1000;
 }
 #leftClose {
-	display: inline-block;
+  display: inline-block;
 }
 #leftOpen {
-	display: inline-block;
+  display: inline-block;
 }
 #rightClose {
-	display: inline-block;
+  display: inline-block;
 }
 #rightOpen {
-	display: inline-block;
+  display: inline-block;
 }
 #doorClose {
-	display: inline-block;
+  display: inline-block;
 }
 #doorOpen {
-	display: inline-block;
+  display: inline-block;
 }
 #lightSwitch {
-	left: 40vw;
-	bottom: 10px;
-	width: 240px;
-	border: 10px solid #555;
-	border-radius: 50px;
-	display: inline-block;
+  left: 40vw;
+  bottom: 10px;
+  width: 240px;
+  border: 10px solid #555;
+  border-radius: 50px;
+  display: inline-block;
 }
 #fireplace {
-	display: inline-block;
+  display: inline-block;
 }
 #left {
-	bottom: 25px;
-	left: 25px;
+  bottom: 25px;
+  left: 25px;
 }
 #right {
-	bottom: 25px;
-	right: 25px;
+  bottom: 25px;
+  right: 25px;
 }
 #bedroom {
-	display: inline-block;
+  display: inline-block;
 }
 #leftWindow {
-	display: inline-block;
+  display: inline-block;
 }
 #rightWindow {
-	display: inline-block;
+  display: inline-block;
 }
 #doorKnob {
-	display: inline-block;
+  display: inline-block;
 }
 #stepBack {
-	display: inline-block;
+  display: inline-block;
 }
 #getCloser {
-	display: inline-block;
+  display: inline-block;
 }
 #start {
-	font-size: 100px;
-	position: relative;
-	top: 55vh;
-	padding: 20px;
-	height: 130px;
-	line-height: 10px;
-	width: 290px;
-	overflow: hidden;
-	display: inline-block;
+  font-size: 100px;
+  position: relative;
+  top: 55vh;
+  padding: 20px;
+  height: 130px;
+  line-height: 10px;
+  width: 290px;
+  overflow: hidden;
+  display: inline-block;
 }
 #start:hover {
-	color: #680707;
-	border-color: darkred;
-	background-color: firebrick;
+  color: #680707;
+  border-color: darkred;
+  background-color: firebrick;
 }
 #acceptFate {
-	display: inline-block;
+  display: inline-block;
 }
 button,
 div {
-	display: inline-block;
+  display: inline-block;
 }
 #whyDoIEvenTryAnymore {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 #devBar {
-	position: relative;
-	top: 60vh;
-	font-size: 20px;
+  position: relative;
+  top: 60vh;
+  font-size: 20px;
 }
 .container {
-	background: #ddd;
-	border: 10px solid #555;
-	border-radius: 100px;
-	font-weight: 900;
-	font-size:40px;
-	padding-left: 10px;
-	padding-right: 10px;
+  background: #ddd;
+  border: 10px solid #555;
+  border-radius: 100px;
+  font-weight: 900;
+  font-size:40px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #x {
-		position:fixed;
-		top:80vh;
+    position:fixed;
+    top:80vh;
 }
 #y {
-		display:flex;
-		justify-content: center;
+    display:flex;
+    justify-content: center;
 }
 #windowSpace {
-		width:35vw;
+    width:35vw;
 }
 #doorSpace {
-		width:20vw;
+    width:20vw;
 }
 
 #myRange {
-	position:fixed;
-	bottom:0px;
+  position:fixed;
+  bottom:0px;
 }
 
 #speedContCont {
-	position:fixed;
-	bottom:25px;
-	display:inline-flex;
- justify-content: center;	
-	opacity: 0;
+  position:fixed;
+  bottom:25px;
+  display:inline-flex;
+ justify-content: center;  
+  opacity: 0;
 }
 #speedCont {
-	background: #ddd;
-	border: 5px solid #555;
-	border-radius: 100px;
-	padding-left: 10px;
-	padding-right: 10px;
+  background: #ddd;
+  border: 5px solid #555;
+  border-radius: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #myRange:hover ~ #speedContCont {
   opacity: 1;
@@ -194,7 +194,7 @@ div {
   -webkit-transition: .2s;
   transition: opacity .2s;
   border-radius:50px;
-	border:5px solid #555;
+  border:5px solid #555;
 }
 
 .slider:hover {
@@ -214,7 +214,7 @@ div {
   background: #000;
   cursor: pointer;
   border-radius:50px;
-		opacity:0.5;
+  opacity:0.5;
 }
 
 .slider::-moz-range-thumb {
@@ -223,7 +223,5 @@ div {
   background: #000;
   cursor: pointer;
   border-radius:50px;
-			opacity:0.5;
-
-}
+  opacity:0.5;
 }
