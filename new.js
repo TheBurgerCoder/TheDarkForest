@@ -1382,7 +1382,7 @@ function fireUpd() {
 	if (!fireplaceIsLit) {
 		fireTick = fireTick + 0.025;
 	} else {
-		fireTick = fireTick - 0.05;
+		fireTick = fireTick - 0.1;
 	}
 	if (fireTick < 0.025) {
 		fireTick = 0;
