@@ -1212,6 +1212,18 @@ function doorInit() {
 function lightScare() {
 	gameActive = false;
 	lightAnimTick = 0;
+	noises.a.volume = 0.5;
+	noises.b.volume = 0.5;
+	noises.c.volume = 0.5;
+	noises.d.volume = 0.5;
+	noises.a.playbackRate = speed;
+	noises.b.playbackRate = speed;
+	noises.c.playbackRate = speed;
+	noises.d.playbackRate = speed;
+	noises.a.play();
+	noises.b.play();
+	noises.c.play();
+	noises.d.play();
 	lightsLoop();
 	setTimeout(function () {
 		setScreen("Died");
@@ -1254,6 +1266,18 @@ function lightsAnim() {
 function fireScare() {
 	gameActive = false;
 	fireAnimTick = 1;
+	noises.a.volume = 0.5;
+	noises.b.volume = 0.5;
+	noises.c.volume = 0.5;
+	noises.d.volume = 0.5;
+	noises.a.playbackRate = speed;
+	noises.b.playbackRate = speed;
+	noises.c.playbackRate = speed;
+	noises.d.playbackRate = speed;
+	noises.a.play();
+	noises.b.play();
+	noises.c.play();
+	noises.d.play();
 	fireLoop();
 	setTimeout(function () {
 		setScreen("Died");
@@ -1289,6 +1313,18 @@ function fireAnim() {
 function windowScare() {
 	gameActive = false;
 	windowsAnimTick = 1;
+	noises.a.volume = 0.5;
+	noises.b.volume = 0.5;
+	noises.c.volume = 0.5;
+	noises.d.volume = 0.5;
+	noises.a.playbackRate = speed;
+	noises.b.playbackRate = speed;
+	noises.c.playbackRate = speed;
+	noises.d.playbackRate = speed;
+	noises.a.play();
+	noises.b.play();
+	noises.c.play();
+	noises.d.play();
 	windowsLoop();
 	setTimeout(function () {
 		setScreen("Died");
@@ -1324,6 +1360,10 @@ function windowsAnim() {
 function doorScare() {
 	gameActive = false;
 	setScreen("JBedroom");
+	noises.a.playbackRate = speed;
+	noises.b.playbackRate = speed;
+	noises.c.playbackRate = speed;
+	noises.d.playbackRate = speed;
 	noises.a.play();
 	noises.b.play();
 	noises.c.play();
