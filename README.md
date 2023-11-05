@@ -7,4 +7,4 @@ Update 1 - Code was supposed to be in folder format, so the js had to be updated
 Update 2 - I didn't fix them all accidentally, all images should now render properly\
 Update 3 - Fire now speeds up when you change the speed, but the sound doesn't yet\
 Update 4 - Fire sound now speeds up with game, but gets really distorted the slower and faster it is. Monsters can now jumpscare you without looking at their wall, change made because several people wanted it\
-Update 5 - Tried adding a favicon in update 4, but didn't work. Now it should
+Update 5 - Tried adding a favicon in update 4, but didn't work. Now it should EDIT: Its never going to work, I'm just going to stop trying. It's litetally been hours and no progress at all, every corner of the internet's ideas haven't worked, this is going nowhere
