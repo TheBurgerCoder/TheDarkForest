@@ -781,7 +781,7 @@ const images = {
 		"inline-block"
 	],
 	Tip9: [
-		"Tip7.png",
+		"Tip9.png",
 		"none",
 		"none",
 		"none",
